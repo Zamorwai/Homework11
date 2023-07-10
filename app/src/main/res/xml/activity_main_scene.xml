@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="5000">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="10"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.2"
+               motion:percentY="0.3" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="29"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.1"
+               motion:percentY="-0.2" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="55"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.5"
+               motion:percentY="0.2" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="63"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.3"
+               motion:percentY="-0.1" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="76"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="0.5"
+               motion:percentY="-0.3" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="82"
+               motion:keyPositionType="pathRelative"
+               motion:percentX="-0.1"
+               motion:percentY="0.1" />
+           <KeyPosition
+               motion:motionTarget="@+id/ball3"
+               motion:framePosition="81"
+               motion:keyPositionType="deltaRelative"
+               motion:percentX="-0.5"
+               motion:percentY="0.1" />
+       </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetStart="@id/end"
+        motion:constraintSetEnd="@id/start"
+        motion:duration="3000"/>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/ball3">
+            <Layout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
