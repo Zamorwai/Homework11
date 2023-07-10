@@ -7,6 +7,12 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        app:srcCompat="@drawable/footballstatium" />
 
     <ImageView
         android:id="@+id/ball3"
